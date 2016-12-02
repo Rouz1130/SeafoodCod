@@ -1,5 +1,5 @@
---temp-output:C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\obj\Debug\netcoreapp1.0\
---out:C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\bin\Debug\netcoreapp1.0\SeafoodCod.dll
+--temp-output:C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\obj\Debug\netcoreapp1.0\
+--out:C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\bin\Debug\netcoreapp1.0\SeafoodCod.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -200,11 +200,11 @@
 --reference:C:\Users\Rouz\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Rouz\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Rouz\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\obj\Debug\netcoreapp1.0\SeafoodCoddotnet-compile.deps.json",SeafoodCod.deps.json
-C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\Program.cs
-C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\Startup.cs
-C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\Migrations\20161202233300_Initial.cs
-C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\Migrations\20161202233300_Initial.Designer.cs
-C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\Migrations\ApplicationDbContextModelSnapshot.cs
-C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\Models\ApplicationDbContext.cs
-C:\Users\Rouz\desktop\SeafoodCod\src\SeafoodCod\Models\ApplicationUser.cs
+--resource:"C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\obj\Debug\netcoreapp1.0\SeafoodCoddotnet-compile.deps.json",SeafoodCod.deps.json
+C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\Program.cs
+C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\Startup.cs
+C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\Migrations\20161202233300_Initial.cs
+C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\Migrations\20161202233300_Initial.Designer.cs
+C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\Migrations\ApplicationDbContextModelSnapshot.cs
+C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\Models\ApplicationDbContext.cs
+C:\Users\Rouz\Desktop\SeafoodCod\src\SeafoodCod\Models\ApplicationUser.cs
