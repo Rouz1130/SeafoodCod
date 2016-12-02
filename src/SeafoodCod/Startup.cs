@@ -5,8 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using SeafoodCod.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace SeafoodCod
 {
@@ -31,9 +31,8 @@ namespace SeafoodCod
                 .AddDefaultTokenProviders();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app)
         {
-            app.UseStaticFiles();
             app.UseIdentity();
             app.UseMvc(routes =>
             {
@@ -43,7 +42,7 @@ namespace SeafoodCod
             });
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Error Page!");
+                await context.Response.WriteAsync("Hello World!");
             });
         }
     }

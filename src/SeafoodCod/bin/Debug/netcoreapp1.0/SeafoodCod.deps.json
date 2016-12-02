@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "fd483c6be93d65bb0437388f622d49919dfa19c6"
+    "signature": "1336adbb51dfac9def3ae2cdf0f78d882603b907"
   },
   "compilationOptions": {
     "defines": [
@@ -26,7 +26,8 @@
           "Microsoft.Extensions.Configuration.Json": "1.0.0",
           "Microsoft.AspNetCore.Mvc": "1.0.0",
           "Microsoft.EntityFrameworkCore": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
+          "Microsoft.AspNetCore.StaticFiles": "1.0.0"
         },
         "runtime": {
           "SeafoodCod.dll": {}
@@ -717,6 +718,21 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Server.Kestrel.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.StaticFiles/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0",
+          "Microsoft.AspNetCore.Http.Extensions": "1.0.0",
+          "Microsoft.Extensions.FileProviders.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0",
+          "Microsoft.Extensions.WebEncoders": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.StaticFiles.dll": {}
         }
       },
       "Microsoft.AspNetCore.WebUtilities/1.0.0": {
@@ -3650,6 +3666,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-GrTVDsRR6j2WrrTuNsZkG1R8aV1UbsA8TKUD+MKVSpXIoEpQNryCT181Zu94CARowQwFQdW4Q1DwfO4FdAhXiQ=="
+    },
+    "Microsoft.AspNetCore.StaticFiles/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pXiUBJtpO0fIlGEg/ESykhbIZ2+I+9Y+3qXzN19zZDDF+tD88eATg3A5MHMXu/VmqaROLfvpGJmJ6uOLUGsBVQ=="
     },
     "Microsoft.AspNetCore.WebUtilities/1.0.0": {
       "type": "package",
