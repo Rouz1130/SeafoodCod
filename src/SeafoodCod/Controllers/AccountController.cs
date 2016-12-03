@@ -23,13 +23,13 @@ namespace BasicAuthentication.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Register()
         {
             return View();
         }
-         [HttpPost]
-         public async Task<IActionResult> Register(RegisterViewModel model)
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
             var user = new ApplicationUser { UserName = model.Email };
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
@@ -39,7 +39,7 @@ namespace BasicAuthentication.Controllers
             }
             else
             {
-                return  View();
+                return View();
             }
         }
         public IActionResult Errors()
@@ -62,6 +62,12 @@ namespace BasicAuthentication.Controllers
             {
                 return View();
             }
+        }
+        public async Task<IActionResult> LogOff()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index");
+        }            
         }
     }
 }
