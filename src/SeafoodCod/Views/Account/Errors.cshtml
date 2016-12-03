@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Microsoft.AspNetCore.Identity
+
+@model IdentityResult
+<div class="padding-huge"></div>
+<h1>Errors</h1>
+
+<ul>
+    @foreach (var listItem in Model.Errors)
+    {
+        <li>listItem</li>
+
+    }
+
+</ul>

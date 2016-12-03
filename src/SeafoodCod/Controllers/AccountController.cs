@@ -42,5 +42,26 @@ namespace BasicAuthentication.Controllers
                 return  View();
             }
         }
+        public IActionResult Errors()
+        {
+            return View(myErrors);
+        }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel user)
+        {
+            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user.Email, user.Password, isPersistent: true, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "User");
+            }
+            else
+            {
+                return View();
+            }
+        }
     }
 }
