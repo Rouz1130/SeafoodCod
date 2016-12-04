@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using SeafoodCod.Models;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 // this controller is too manage our newsletter.
 
@@ -29,6 +30,32 @@ namespace SeafoodCod.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Create(Newsletter newsletter)
+        {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            var currentUser = await _userManager.FindByIdAsync(userId);
+
+            newsletter.User = currentUser;
+            _db.Newsletters.Add(newsletter);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

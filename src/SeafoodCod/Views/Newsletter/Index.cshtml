@@ -4,8 +4,29 @@
 }
 
 @using System.Security.Claims
+@model IEnumerable<SeafoodCod.Models.Newsletter>
 
+<section class="items-wrap">
 <h1>Sign up to our Newsletter to keep up to date, @User.Identity.Name</h1>
 <hr />
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var listNewsletter in Model)
+        {
+            <li>@Html.DisplayFor(modelNewsletter => listNewsletter.Country, listNewsletter.Country)</li>
+
+        }
+    </ul>
+}
+else
+{
+    <p>Please Sign up to our Newsletter</p>
+}
+</section>
+
+
+
 
 @Html.ActionLink("Create new", "Create")

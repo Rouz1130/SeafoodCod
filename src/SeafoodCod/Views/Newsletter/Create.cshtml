@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model SeafoodCod.Models.Newsletter
+    
+<div class="padding-huge"></div>
+
+<h1>Sign up to our Newsletter</h1>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Email)
+    @Html.EditorFor(model => model.Email)
+
+    @Html.LabelFor(model => model.Country)
+    @Html.EditorFor(model => model.Country)
+
+
+    <input type="submit" value="Create" />
+}
