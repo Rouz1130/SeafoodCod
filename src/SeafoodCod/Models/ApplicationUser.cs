@@ -10,3 +10,6 @@ namespace SeafoodCod.Models
     {
     }
 }
+
+//Identity is a system for managing users. Identity comes with a class to represent users, named *IdentityUser.//
+// ApplicationUser is a class that extends from IdentityUser to serve as one of the models in our application.//
