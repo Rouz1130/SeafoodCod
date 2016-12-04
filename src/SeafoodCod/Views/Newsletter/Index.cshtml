@@ -3,21 +3,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using SeafoodCod.ViewModels
+@using System.Security.Claims
 
-@model RegisterViewModel
+<h1>Sign up to our Newsletter to keep up to date, @User.Identity.Name</h1>
+<hr />
 
-<div class="padding-huge"></div>
-    <h1>Newsletter Sign Up</h1>
-    @using (Html.BeginForm("Register", "Newsletter", FormMethod.Post))
-    { @Html.LabelFor(m => m.Email)
-        @Html.TextBoxFor(m => m.Email)
-
-        @Html.LabelFor(m => m.Password)
-        @Html.PasswordFor(m => m.Password)
-
-        @Html.LabelFor(m => m.ConfirmPassword)
-        @Html.PasswordFor(m => m.ConfirmPassword)
-
-        <input type="submit" value="Register" />
-    }
+@Html.ActionLink("Create new", "Create")
