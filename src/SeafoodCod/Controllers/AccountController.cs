@@ -15,6 +15,7 @@ namespace SeafoodCod.Controllers
         private readonly ApplicationDbContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private IEnumerable<IdentityError> myErrors { get; set; }
 
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ApplicationDbContext db)
         {
@@ -46,7 +47,10 @@ namespace SeafoodCod.Controllers
                 return View();
             }
         }
-       
+        public IActionResult Errors()
+        {
+            return View(myErrors);
+        }
         public IActionResult Login()
         {
             return View();
