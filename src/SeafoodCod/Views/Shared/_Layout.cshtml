@@ -27,15 +27,15 @@
                         <div class="demos">
                             @if (User.Identity.IsAuthenticated)
                             {
-                                @Html.ActionLink("Logoff", "Logoff", "Home", null, new { @class = "demos__item" })
+                                @Html.ActionLink("Logoff", "Logoff", "Account", null, new { @class = "demos__item" })
                                 @Html.ActionLink("Add Pictures", "Create", "User", null, new { @class = "demos__item" })
 
                             }
                             else
                             {
-                                @Html.ActionLink("Home", "Index", "Home", null, new { @class = "demos__item" })
-                                @Html.ActionLink("Sign UP", "Register", "Home", null, new { @class = "demos__item" })
-                                @Html.ActionLink("Login", "Login", "Home", null, new { @class = "demos__item" })
+                                @Html.ActionLink("Home", "Index", "Account", null, new { @class = "demos__item" })
+                                @Html.ActionLink("Sign UP", "Register", "Account", null, new { @class = "demos__item" })
+                                @Html.ActionLink("Login", "Login", "Account", null, new { @class = "demos__item" })
                             }
 
                         </div>

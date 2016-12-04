@@ -1,10 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using SeafoodCod.Models;
-using System.Threading.Tasks;
 using SeafoodCod.ViewModels;
 
-namespace BasicAuthentication.Controllers
+
+namespace SeafoodCod.Controllers
 {
     public class AccountController : Controller
     {
@@ -42,10 +46,7 @@ namespace BasicAuthentication.Controllers
                 return View();
             }
         }
-        public IActionResult Errors()
-        {
-            return View(myErrors);
-        }
+       
         public IActionResult Login()
         {
             return View();
@@ -70,4 +71,3 @@ namespace BasicAuthentication.Controllers
         }            
         }
     }
-}

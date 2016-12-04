@@ -8,7 +8,7 @@
 @model RegisterViewModel
 <div class="padding-huge"></div>
     <h1>Sign Up</h1>
-    @using (Htl.BeginForm("Register", "Home", FormMethod.Post))
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
     {
         @Html.LabelFor(m => m.Email)
         @Html.TextBoxFor(m => m.Email)
