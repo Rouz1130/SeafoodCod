@@ -61,7 +61,7 @@ namespace SeafoodCod.Controllers
             Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user.Email, user.Password, isPersistent: true, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "User");
+                return RedirectToAction("Index", "Account");
             }
             else
             {

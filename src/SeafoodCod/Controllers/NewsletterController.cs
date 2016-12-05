@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using SeafoodCod.Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Hosting;
 
 // this controller is too manage our newsletter.
 
@@ -19,12 +20,15 @@ namespace SeafoodCod.Controllers
         // Private instance of our Databse to work with, we need the userManager to work with users.
         private readonly ApplicationDbContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IHostingEnvironment _environement;
 
-        public NewsletterController (UserManager <ApplicationUser> userManager, ApplicationDbContext db)
+
+        public NewsletterController (UserManager <ApplicationUser> userManager, ApplicationDbContext db, IHostingEnvironment environment)
         {
             
             _userManager = userManager;
             _db = db;
+            _environement = environment;
         }        
 
         public IActionResult Index()
