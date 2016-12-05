@@ -104,6 +104,10 @@ a:focus {
 	border-color: initial;
 }
 
+h2 {
+    font-size: 15px;
+    font-family:'Agency FB';
+}
 .related {
 	padding: 9em 1em;
 	text-align: center;

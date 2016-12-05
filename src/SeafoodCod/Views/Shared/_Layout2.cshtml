@@ -18,12 +18,12 @@
 <body>
     <div id="container" class="container">
         <header class="intro">
-            <img class="intro__image" src="http://uploads.visitseattle.org/2015/04/FerryDusk2_TiffanyVonArnim-1024x584.jpg" alt="Pike Place" />
+            <img class="intro__image" src="https://cbsseattle.files.wordpress.com/2014/03/186897867.jpg?w=594&h=360&crop=1" alt="Flying fish" />
             <div class="intro__content">
                 <h1 class="intro__title">Welcome to SeafoodCod</h1>
                 <div class="intro__subtitle">
                     <div class="intro__description">
-                      <h3>We offer the best Seafood! in the Pacific Northwest</h3>
+                        <h3>We offer the best Seafood! in the Pacific Northwest</h3>
                         <div class="demos">
                             @if (User.Identity.IsAuthenticated)
                             {
@@ -36,10 +36,11 @@
                                 <h3>@Html.ActionLink("Home", "Index", "Account", null, new { @class = "demos__item" })</h3>
                                 <h3>@Html.ActionLink("Sign Up", "Register", "Account", null, new { @class = "demos__item" })</h3>
                                 <h3>@Html.ActionLink("Login", "Login", "Account", null, new { @class = "demos__item" })</h3>
-                                <h3>@Html.ActionLink("Newsletter","Index", "Newsletter" , null, new { @class = "demos_item" })</h3>
+                                <h3>@Html.ActionLink("Newsletter", "Index", "Newsletter", null, new { @class = "demos_item" })</h3>
                             }
 
 
+                        </div>
                         </div>
                     </div>
                     <button class="trigger">

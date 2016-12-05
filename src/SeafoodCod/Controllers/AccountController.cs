@@ -17,13 +17,15 @@ namespace SeafoodCod.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private IEnumerable<IdentityError> myErrors { get; set; }
 
+        // Dependency injectin n the constructor to configure our services/
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ApplicationDbContext db)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _db = db;
         }
-
+        //Get: /<controllers>/
+        // This is were we set up the Identity or user and Sign in services/
         public IActionResult Index()
         {
             return View();
@@ -47,14 +49,17 @@ namespace SeafoodCod.Controllers
                 return View();
             }
         }
+
         public IActionResult Errors()
         {
             return View(myErrors);
         }
+
         public IActionResult Login()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel user)
         {

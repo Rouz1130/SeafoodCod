@@ -29,16 +29,20 @@ namespace SeafoodCod.Controllers
             _userManager = userManager;
             _db = db;
             _environement = environment;
-        }        
+        }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var id = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(id);
+            return View(_db.Newsletters.Where(x => x.User.Id == currentUser.Id));
+            
         }
         public IActionResult Create()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Create(Newsletter newsletter)
         {

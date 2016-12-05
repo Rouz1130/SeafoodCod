@@ -7,7 +7,7 @@
 @model IEnumerable<SeafoodCod.Models.Newsletter>
 
 <section class="items-wrap">
-<h1>Sign up to our Newsletter to keep up to date, @User.Identity.Name</h1>
+<h1>Newsletter mailing list</h1>
 <hr />
 
 @if (Model.Any())
@@ -15,7 +15,8 @@
     <ul>
         @foreach (var listNewsletter in Model)
         {
-            <li>@Html.DisplayFor(modelNewsletter => listNewsletter.Country, listNewsletter.Country)</li>
+            <li>@Html.DisplayFor(modelNewsletter => listNewsletter.Email)</li>
+            <li>@Html.DisplayFor(modelNewsletter => listNewsletter.Country)</li>
 
         }
     </ul>
@@ -28,5 +29,4 @@ else
 
 
 
-
-@Html.ActionLink("Create new", "Create")
+@Html.ActionLink("NEWSLETTER SIGN UP", "Create", "Newsletter")
