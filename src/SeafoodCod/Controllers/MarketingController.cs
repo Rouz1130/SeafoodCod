@@ -18,10 +18,9 @@ namespace SeafoodCod.Controllers
             _db = db;
         }
 
-
         public IActionResult Index()
         {
-            return View();
+            return View(_db.Marketing.ToList());
         }
     }
 }
