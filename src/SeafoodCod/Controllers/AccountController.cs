@@ -17,13 +17,14 @@ namespace SeafoodCod.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private IEnumerable<IdentityError> myErrors { get; set; }
 
-        // Dependency injectin n the constructor to configure our services/
+        // Dependency injection n the constructor to configure our services/
         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ApplicationDbContext db)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _db = db;
         }
+
         //Get: /<controllers>/
         // This is were we set up the Identity or user and Sign in services/
         public IActionResult Index()
@@ -35,6 +36,7 @@ namespace SeafoodCod.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
@@ -46,13 +48,8 @@ namespace SeafoodCod.Controllers
             }
             else
             {
-                return View();
+                return View("Errors");
             }
-        }
-
-        public IActionResult Errors()
-        {
-            return View(myErrors);
         }
 
         public IActionResult Login()
@@ -70,9 +67,16 @@ namespace SeafoodCod.Controllers
             }
             else
             {
-                return View();
+                return View("Errors");
             }
         }
+
+        public IActionResult Errors()
+        {
+            return View();
+        }
+
+
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();

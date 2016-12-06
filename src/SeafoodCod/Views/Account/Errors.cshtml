@@ -6,13 +6,13 @@
 
 @model IdentityResult
 <div class="padding-huge"></div>
-<h1>Errors</h1>
+<h1>Opps! wrong email or password please retry</h1>
 
 <ul>
     @foreach (var listItem in Model.Errors)
     {
         <li>listItem</li>
-
+        @Html.ActionLink("Home","Index", "Account")
     }
 
 </ul>
