@@ -20,7 +20,7 @@ namespace SeafoodCod.Controllers
 
         public IActionResult Index()
         {
-            return View(_db.Marketing.ToList());
+            return View(_db.Marketings.ToList());
         }
     }
 }

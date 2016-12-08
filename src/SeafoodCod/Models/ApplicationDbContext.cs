@@ -16,5 +16,6 @@ namespace SeafoodCod.Models
         }
         // we our setting our new Database "newsletters".//
         public DbSet<Newsletter> Newsletters { get; set; }
+        public DbSet<Marketing> Marketings { get; set; }
     }
 }

@@ -172,6 +172,22 @@ namespace SeafoodCod.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("SeafoodCod.Models.Marketing", b =>
+                {
+                    b.Property<int>("MarketingId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Img");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("MarketingId");
+
+                    b.ToTable("marketings");
+                });
+
             modelBuilder.Entity("SeafoodCod.Models.Newsletter", b =>
                 {
                     b.Property<int>("NewsletterId")

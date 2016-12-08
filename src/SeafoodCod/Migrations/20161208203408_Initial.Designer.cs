@@ -8,8 +8,8 @@ using SeafoodCod.Models;
 namespace SeafoodCod.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20161204045245_AddNewsletterTable")]
-    partial class AddNewsletterTable
+    [Migration("20161208203408_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -171,6 +171,22 @@ namespace SeafoodCod.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("SeafoodCod.Models.Marketing", b =>
+                {
+                    b.Property<int>("MarketingId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Img");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("MarketingId");
+
+                    b.ToTable("marketings");
                 });
 
             modelBuilder.Entity("SeafoodCod.Models.Newsletter", b =>

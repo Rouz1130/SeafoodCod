@@ -46,6 +46,7 @@ namespace SeafoodCod.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Newsletter newsletter)
         {
+            
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             var currentUser = await _userManager.FindByIdAsync(userId);
@@ -54,13 +55,6 @@ namespace SeafoodCod.Controllers
             _db.Newsletters.Add(newsletter);
             _db.SaveChanges();
             return RedirectToAction("Index");
-
-
-
-
-
-
-
 
 
 

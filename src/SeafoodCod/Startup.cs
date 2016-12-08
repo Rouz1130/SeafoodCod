@@ -48,7 +48,7 @@ namespace SeafoodCod
             });
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Error Page!");
+                await context.Response.WriteAsync("Opps Error");
             });
         }
     }
