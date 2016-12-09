@@ -1,25 +1,46 @@
 ﻿@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Add a Blog";
+    Layout = "~/Views/Shared/_Layout4.cshtml";
 }
 
 @model SeafoodCod.Models.Marketing
 
-<div class="padding-huge"></div>
 
-<h1>Sign up to our Newsletter</h1>
-<hr />
+
+<div class="padding-huge"></div>
+<h3>SON OF COD SEAFOOD, NATURAL, SUSTAINABLE. IT’S THE CONSUMER’S PREFERENCE.</h3>
+<p>
+    For the best service and fast delivery let us provide you what you need. We will ship
+    to your company free of charge and we gurantee that you will be satisfied.
+</p>
+<br />
+<img class="img" src="http://i.justcooking.in/media/salmonsteak.jpg" alt="fish steak" />
+
+@Html.ActionLink("Marketing", "MarketingEdit", "Marketing", null, new { @class = "demos-item" })
+
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Title)
-    @Html.EditorFor(model => model.Title)
+    <h2> Edit this Marketing: @Html.DisplayFor(model => model.Title)</h2>
+    <hr />
 
-    @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model => model.MarketingId)
 
-    @Html.LabelFor(model => model.Img)
-    @Html.EditorFor(model => model.Img)
+            @Html.LabelFor(model => model.Title)
+            @Html.EditorFor(model => model.Title)
+            <br /><br />
+            @Html.LabelFor(model => model.Img)
+            @Html.EditorFor(model => model.Img)
+            <br /><br />
+            @Html.LabelFor(model => model.Description)
+            @Html.TextAreaFor(model => model.Description)
+            <br /><br />
 
+            <input type="submit" value="Save" class="btn btn-primary" />
 
-    <input type="submit" value="Create" />
+        }
+
 }
+
+
