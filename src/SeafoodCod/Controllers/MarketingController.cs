@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SeafoodCod.Models;
 
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace SeafoodCod.Controllers
 {
@@ -20,7 +19,12 @@ namespace SeafoodCod.Controllers
 
         public IActionResult Index()
         {
-            return View(_db.Marketings.ToList());
+            return View();
+        }
+
+        public IActionResult MarketingEdit()
+        {
+            return View();
         }
     }
 }

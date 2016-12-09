@@ -52,10 +52,12 @@ namespace SeafoodCod.Controllers
             }
         }
 
+
         public IActionResult Login()
         {
             return View();
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel user)
