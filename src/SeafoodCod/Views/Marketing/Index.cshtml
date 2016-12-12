@@ -1,30 +1,45 @@
 ﻿@{
     ViewData["Title"] = "Add a Blog";
     Layout = "~/Views/Shared/_Layout5.cshtml";
+
 }
 
+@using System.Security.Claims
 @model SeafoodCod.Models.Marketing
 
 
+    <div class="contact container-nav">
+        <br />
+        <h2 class="aboutP">SeafoodCod History</h2>
+        <hr />
+        <p>
+            Welcome to SeafoodCod Market, a family owned & operated fish market providing a variety
+            of fresh seafood including Homemade Seafood & Clam Chowders, live lobsters, shellfish, clams, shrimp,
+            scallops, haddock, scrod, sole, salmon, swordfish, tuna, and much more, including seasonal specials!.
+        </p>
 
-    @using (Html.BeginForm())
-    {
-        @Html.HiddenFor(model => model.MarketingId)
+        <h4><b>Partners:</b></h4>
+        <p>
+            Catalina Offshore Products is among 11 restaurant and retail businesses that have partnered
+            with Seafood for the Future, whose mission is to encourage healthy and responsible seafood choices.
+            As a result, Catalina Offshore Products is part of a network of businesses committed to sourcing
+            better seafood choices from responsible fisheries or farms.
+        </p>
+    </div>
 
-        @Html.LabelFor(model => model.Title)
-        @Html.EditorFor(model => model.Title)
-        <br /><br />
-            @Html.LabelFor(model => model.Img)
-            @Html.EditorFor(model => model.Img)
-            <br /><br />
-            @Html.LabelFor(model => model.Description)
-            @Html.TextAreaFor(model => model.Description)
-            <br /><br />
-            <input type="submit" value="Save" class="btn btn-primary" />
 
-    }
 
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

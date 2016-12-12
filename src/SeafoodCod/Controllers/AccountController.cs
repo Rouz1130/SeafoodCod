@@ -74,6 +74,22 @@ namespace SeafoodCod.Controllers
                 return View("Errors");
             }
         }
+        
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Create(Marketing marketing)
+        {
+            _db.Marketings.Add(marketing);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
         // Get
         public IActionResult MarketingEdit(int id)
         {

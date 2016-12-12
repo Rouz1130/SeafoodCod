@@ -22,8 +22,8 @@ body {
   font-weight: 100;
   font-size: 12px;
   line-height: 30px;
-  color: steelblue;
-  background: #2F4F4F;
+  color:steelblue;
+  background: #2a2e39;
   box-shadow: rgb(47,79,79);
 }
 
@@ -216,6 +216,7 @@ p {
 .C {
   text-align: right;
 }
+
 
 
 
