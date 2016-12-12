@@ -16,6 +16,7 @@ namespace SeafoodCod.Models
         public string Description { get; set; }
         public string Img { get; set; }
        
+       
 
     }
 }

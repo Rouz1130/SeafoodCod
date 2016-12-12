@@ -1,0 +1,275 @@
+﻿
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: steelblue;
+  background: #2F4F4F;
+  box-shadow: rgb(47,79,79);
+}
+
+
+
+
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea,
+.contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.contact h3 {
+  font-style:normal;
+  font-family: fantasy;
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+.contact input[type="text"]:hover,
+.contact input[type="email"]:hover,
+.contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+.contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+.contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: black;
+  color: steelblue;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.contact button[type="submit"]:hover {
+  background: #CCCCCC;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+.htitle{
+  font-style: normal;
+  font-family: fantasy;
+  font-size: 45px;
+  font-stretch: display:inline-block;
+    -webkit-transform:scale(1.5,1); /* Safari and Chrome */
+    -moz-transform:scale(1.5,1); /* Firefox */
+    -ms-transform:scale(1.5,1); /* IE 9 */
+    -o-transform:scale(1.5,1); /* Opera */
+  color: steelblue;
+  text-align: center;
+  text-shadow: 0px 2px 0px   #66ccff,
+               0px 11px 10px rgba(0,0,0,0.15),
+               0px 20px 2px rgba(0,0,0,0.1),
+               0px 26px 30px rgba(0,0,0,0.1);
+}
+
+
+.container {
+
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.aboutP {
+  font-style: normal;
+  font-family: fantasy;
+}
+
+p {
+  font-style: normal;
+  color: black;
+}
+
+.jumbotron {
+    margin-bottom: 50px;
+    background-image: url("");
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    /*text-shadow: black 0.3em 0.3em 0.3em;*/
+    padding-top: 10px;
+    border-radius: 60px;
+}
+.cpage {
+  font-family: serif;
+  color: steelblue;
+  text-align:center;
+  font-size: 47px;
+}
+
+.ppage {
+  text-align: center;
+  font-size: 18px;
+}
+
+.box {
+  width: 700px;
+  height: 1500x;
+  padding: 50px;
+  border: 1px solid black;
+
+
+}
+
+.form-control {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 75px;
+  height: 30px;
+  border: 3px solid steelblue;
+}
+
+
+.container-nav {
+
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.C {
+  text-align: right;
+}
+
+
+
+
+
+
+
+
+
+/*body {
+    background-color:#2a2e39;
+
+}
+    
+h1 {
+   color:white;
+   font-family: "Playfair Display", Georgia, serif;
+   font-weight:900;
+   font-size:4em;
+
+}
+.editor-label{
+   color:white;
+   font-family: "Playfair Display", Georgia, serif;
+   	margin: 0 0 20px;
+	font-weight: 800;
+	font-size: 2em;
+    align-items:baseline;
+}*/
+
+
+
+
+
+
+
+
+/*body {
+    background-color:#2a2e39;
+
+}
+    
+h1 {
+   color:white;
+   font-family: "Playfair Display", Georgia, serif;
+   font-weight:900;
+   font-size:4em;
+
+}
+.editor-label{
+   color:white;
+   font-family: "Playfair Display", Georgia, serif;
+   	margin: 0 0 20px;
+	font-weight: 800;
+	font-size: 2em;
+    align-items:baseline;
+}*/

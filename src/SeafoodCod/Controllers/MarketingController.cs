@@ -4,7 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SeafoodCod.Models;
-
+using Microsoft.AspNetCore.Identity;
+using SeafoodCod.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace SeafoodCod.Controllers
 {
@@ -22,9 +26,12 @@ namespace SeafoodCod.Controllers
             return View();
         }
 
-        public IActionResult MarketingIndex()
+        public IActionResult MarketingEdit()
         {
             return View();
         }
+
+        
+        }
     }
-}
+

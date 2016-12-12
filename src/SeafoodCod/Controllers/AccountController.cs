@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using SeafoodCod.Models;
 using SeafoodCod.ViewModels;
+using Microsoft.EntityFrameworkCore;
+// Microsoft.EntityFrameworkCore allows access to EntityState.
 
 
 namespace SeafoodCod.Controllers
@@ -71,6 +73,22 @@ namespace SeafoodCod.Controllers
             {
                 return View("Errors");
             }
+        }
+        // Get
+        public IActionResult MarketingEdit(int id)
+        {
+            var thisMarket = _db.Marketings.FirstOrDefault(marketings => marketings.MarketingId == id);
+            return View();
+        }
+
+        //Post
+        [HttpPost]
+        public IActionResult MarketingEdit(Marketing marketing)
+        {
+            // modify the individual entry with EntityState.Modified, saves the changes, and takes us back to marketingEdit.
+            _db.Entry(marketing).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("MarketingEdit");
         }
 
         public IActionResult Errors()
