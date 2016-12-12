@@ -75,14 +75,14 @@ namespace SeafoodCod.Controllers
             }
         }
         
-        public IActionResult Create()
+        public IActionResult CreateMarketing()
         {
             return View();
         }
 
 
         [HttpPost]
-        public IActionResult Create(Marketing marketing)
+        public IActionResult CreateMarketing(Marketing marketing)
         {
             _db.Marketings.Add(marketing);
             _db.SaveChanges();

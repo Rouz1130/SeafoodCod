@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Add a Blog";
+    Layout = "~/Views/Shared/_Layout5.cshtml";
+
+}
+
+@model SeafoodCod.Models.Marketing
+
+@using System.Security.Claims
+
+<div class="contact container-nav">
+    <br />
+    <h2 class="aboutP">SeafoodCod History</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Title)
+        @Html.TextBoxFor(model => model.Title)
+        <br /><br />
+        @Html.LabelFor(model => model.Description)
+        @Html.TextAreaFor(model => model.Description)
+        <br /><br />
+        @Html.LabelFor(model => model.Img)
+        @Html.TextBoxFor(model => model.Img)
+        <br /><br />
+       
+        <br /><br />
+        <input type="submit" value="CreateMarketing" class="btn btn-primary" />
+    }
+    <p>@Html.ActionLink("Back to Marketing Page", "Index", "Marketing")</p>
+</div>
+

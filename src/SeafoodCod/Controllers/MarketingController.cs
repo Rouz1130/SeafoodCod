@@ -26,6 +26,11 @@ namespace SeafoodCod.Controllers
             return View();
         }
 
+        public IActionResult CreateMarketing()
+        {
+            return View();
+        }
+
         public IActionResult MarketingEdit()
         {
             return View();
