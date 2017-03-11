@@ -6,7 +6,7 @@
 #### By _** Rouz Majlessi / Dec 2nd, 2016**_
 
 ## Specs
- * The site should be accessible to anonymous users, and to admins from the Son of Cod marketing team. 
+ * The site should be accessible to anonymous users, and to admins from the SeafoodCod marketing team. 
  * As an admin, user should be able to register new admins who will have equal access to the admin features on the site.
  * Landing page/Marketing page
  
