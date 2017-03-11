@@ -20,9 +20,7 @@ You will need visual studios installed
 #### Installation
 * `git clone <repository-url>` this repository
 * Open the file in visual studios`.
-* An initial user to login will bet set up as   
 *Pawword has to have numbers, letters , and characters
-
 
 ## Support and contact details
 
