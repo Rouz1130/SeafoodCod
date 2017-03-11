@@ -13,10 +13,15 @@
  on the page, on a new page, or in a modal, but it should not be visible to any anonymous users.
  
 ## Setup/Installation
-1. Files can be cloned from https://github.com/TalayRuk/SonOfCod.git 
-2. Open Visual Studio 2015 : File>Open>Project/Solution
-3. Click Build GummiBearKingdom 
-4. Click IIS Express on the Menu Bar to go to the site
+
+## Installation
+You will need visual studios installed
+
+#### Installation
+* `git clone <repository-url>` this repository
+* Open the file in visual studios`.
+* An initial user to login will bet set up as   
+*Pawword has to have numbers, letters , and characters
 
 
 ## Support and contact details
